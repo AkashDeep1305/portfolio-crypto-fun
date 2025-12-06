@@ -19,11 +19,15 @@ Open `index.html` or `dashboard.html` directly. For local testing, use a static 
 - Python: `python -m http.server 8080`
 - Node: `npx serve`
 
+## Demo Link
+`http://akashdeep1305.github.io/portfolio-crypto-fun/`
+
 ## Customize
 - Edit content in `index.html` timeline cards and projects grid.
 - Replace images in `assets/images`.
 - Add icons in `assets/icons`.
-- Tweak theme in `styles/style.css`.
+- Tweak theme in `css/style.css`.
 
 ## Notes
 No backend required. APIs are public. Rate limits may apply.
+
