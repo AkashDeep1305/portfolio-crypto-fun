@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DevSphere | Interactive Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/logo-1.png" />
+  <meta name="description" content="Interactive portfolio with 3D hero, GSAP timeline, and data dashboard." />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <img src="assets/images/logo-1.png" alt="DevSphere logo" width="56" height="56" />
+      <span>DevSphere</span>
+    </div>
+    <nav aria-label="Primary">
+      <ul class="nav">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </nav>
+    <button id="themeToggle" class="icon-button" aria-label="Toggle theme">
+      <img src="assets/icons/moon.png" alt="" aria-hidden="true">
+    </button>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-label="3D hero">
+      <div id="three-container" class="three-container" role="img" aria-label="Animated 3D scene"></div>
+      <div class="hero-content">
+        <h1>Hi, I'm Akash — I build interactive systems</h1>
+        <p>Full‑stack developer blending analytics, automation, and delightful UI/UX.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="dashboard.html">
+            <img src="assets/icons/chart.png" alt="" aria-hidden="true"> Explore dashboard
+          </a>
+          <a class="button ghost" href="#projects">
+            <img src="assets/icons/external.png" alt="" aria-hidden="true"> View projects
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" class="stats">
+      <div class="stat-card" data-tilt>
+        <h3>Projects</h3>
+        <p><span id="projectCount">12</span> shipped</p>
+      </div>
+      <div class="stat-card" data-tilt>
+        <h3>Automation</h3>
+        <p><span id="automationHours">200+</span> hours saved</p>
+      </div>
+      <div class="stat-card" data-tilt>
+        <h3>Open Source</h3>
+        <p><span id="stars">120</span> stars</p>
+      </div>
+    </section>
+
+    <section id="timeline" class="timeline-section" aria-label="Career timeline">
+      <h2>Journey</h2>
+      <div class="timeline">
+        <article class="timeline-item">
+          <img src="assets/images/timeline-1.png" loading="lazy" alt="Crypto dashboard project preview">
+          <div class="content">
+            <h3>Crypto Prediction Dashboard</h3>
+            <p>Interactive visualizations with error‑handled automation and resilient UI.</p>
+            <a class="button small" href="#" target="_blank" rel="noopener">Live demo</a>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <img src="assets/images/timeline-2.png" loading="lazy" alt="Full-stack workflow">
+          <div class="content">
+            <h3>Full‑stack Workflow Engine</h3>
+            <p>Frontend‑backend integrations, clean routes, and scalable design systems.</p>
+            <a class="button small" href="#" target="_blank" rel="noopener">Case study</a>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <img src="assets/images/timeline-3.png" loading="lazy" alt="Analog current source design">
+          <div class="content">
+            <h3>Analog Current Source</h3>
+            <p>Biasing stability analysis and practical architecture comparisons.</p>
+            <a class="button small" href="#" target="_blank" rel="noopener">Notes</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Featured projects</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="assets/images/plac.png" loading="lazy" alt="Project thumbnail" style="background-color: beige;" />
+          <div class="card-body">
+            <h3>Automation Toolkit</h3>
+            <p>OS‑level scheduling, retries, logging, and alerts.</p>
+            <div class="actions">
+              <a href="#" class="button small">Demo</a>
+              <a href="#" class="button small ghost">GitHub</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/images/iot.png" loading="lazy" alt="Project thumbnail" />
+          <div class="card-body">
+            <h3>IoT Dashboard</h3>
+            <p>Sensor analytics, anomaly detection, and clean UI flows.</p>
+            <div class="actions">
+              <a href="#" class="button small">Demo</a>
+              <a href="#" class="button small ghost">GitHub</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/images/desg.png" loading="lazy" alt="Project thumbnail" />
+          <div class="card-body">
+            <h3>Design System</h3>
+            <p>Accessible, animated, and modular components.</p>
+            <div class="actions">
+              <a href="#" class="button small">Demo</a>
+              <a href="#" class="button small ghost">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="resume-actions">
+      <button id="exportPdf" class="button">
+        Export résumé as PDF
+      </button>
+      <a href="dashboard.html" class="button ghost">Open data dashboard</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="profile">
+      <img src="assets/images/profile.png" alt="Akash profile photo" width="48" height="48" />
+      <div>
+        <strong>Akash</strong>
+        <p>Full‑stack developer • India</p>
+      </div>
+    </div>
+    <div class="footer-actions">
+      <a href="#" class="icon-link" aria-label="GitHub">
+        <img src="assets/icons/git.png" alt="" aria-hidden="true" width="80" height="80"> GitHub
+      </a>
+      <a href="dashboard.html" class="icon-link">
+        <img src="assets/icons/chart.png" alt="" aria-hidden="true" width="60" height="60" style="background-color: white; border-radius: 8px;"> Dashboard
+      </a>
+    </div>
+  </footer>
+
+  <!-- Libraries via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+
+  <!-- Project scripts -->
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/main.js" type="module"></script>
+  <script type="module" src="assets/js/three-hero.js"></script>
+  <script src="assets/js/timeline.js"></script>
+</body>
+</html>

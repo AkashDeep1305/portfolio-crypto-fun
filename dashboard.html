@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DevSphere — Data Dashboard</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/logo-1.png" />
+</head>
+
+<body data-page="dashboard">
+  <header class="site-header">
+    <div class="brand">
+      <img src="assets/images/logo-1.png" alt="DevSphere logo" width="36" height="36" />
+      <span>DevSphere</span>
+    </div>
+    <nav aria-label="Primary">
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+      </ul>
+    </nav>
+    <button id="themeToggle" class="icon-button" aria-label="Toggle theme">
+      <img src="assets/icons/sun.png" alt="" aria-hidden="true">
+    </button>
+  </header>
+
+  <main class="dashboard">
+    <section class="dashboard-controls">
+      <div class="control-group">
+        <label for="coinSelect"><strong>Coin:</strong></label>
+        <select id="coinSelect" aria-label="Select cryptocurrency">
+          <option value="bitcoin">Bitcoin</option>
+          <option value="ethereum">Ethereum</option>
+          <option value="solana">Solana</option>
+          <option value="cardano">Cardano</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="rangeSelect"><strong>Range:</strong></label>
+        <select id="rangeSelect" aria-label="Select time range">
+          <option value="7">7d</option>
+          <option value="14">14d</option>
+          <option value="30">30d</option>
+          <option value="90">90d</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <button id="refreshData" class="button">Refresh</button>
+      </div>
+    </section>
+
+    <section class="charts">
+      <canvas id="priceChart" aria-label="Price chart" role="img"></canvas>
+      <canvas id="volChart" aria-label="Volume chart" role="img"></canvas>
+    </section>
+
+    <section class="insights">
+      <div class="insight-card">
+        <h3>Current price</h3>
+        <p id="currentPrice">—</p>
+      </div>
+      <div class="insight-card">
+        <h3>24h change</h3>
+        <p id="change24h">—</p>
+      </div>
+      <div class="insight-card">
+        <h3>Volatility index</h3>
+        <p id="volatilityIndex">—</p>
+      </div>
+    </section>
+
+    <section class="game-section">
+      <h2>Mini‑game: Catch the Coin</h2>
+      <canvas id="gameCanvas" width="600" height="280" aria-label="Catch the coin game"></canvas>
+      <div class="game-stats">
+        <p><strong>Score:</strong> <span id="score">0</span></p>
+        <p><strong>Misses:</strong> <span id="misses">0</span></p>
+      </div>
+      <div class="game-controls">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn">Stop</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Data via public APIs • Client‑side only</p>
+  </footer>
+
+  <!-- Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+
+  <!-- Project scripts -->
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/main.js" type="module"></script>
+  <script src="assets/js/dashboard.js" type="module"></script>
+  <script src="assets/js/game.js"></script>
+</body>
+
+</html>
