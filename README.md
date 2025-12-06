@@ -20,7 +20,7 @@ Open `index.html` or `dashboard.html` directly. For local testing, use a static 
 - Node: `npx serve`
 
 ## Demo Link
-`http://akashdeep1305.github.io/portfolio-crypto-fun/`
+[http://akashdeep1305.github.io/portfolio-crypto-fun/]
 
 ## Customize
 - Edit content in `index.html` timeline cards and projects grid.
@@ -30,4 +30,5 @@ Open `index.html` or `dashboard.html` directly. For local testing, use a static 
 
 ## Notes
 No backend required. APIs are public. Rate limits may apply.
+
 
